@@ -1,0 +1,16 @@
+html {
+    width: 1140px;
+    border: 1px solid #000;
+    margin: 10px auto;
+}
+
+.canvas-div {
+    width: 40%;
+    margin-left: 30%;
+    margin: auto;
+}
+.canvas {
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+}
+
