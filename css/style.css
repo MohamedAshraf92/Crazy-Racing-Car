@@ -10,7 +10,7 @@ html {
     margin: auto;
 }
 .canvas {
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid rgb(0, 0, 0);
 }
 
