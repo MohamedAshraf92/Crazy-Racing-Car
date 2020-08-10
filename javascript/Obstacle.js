@@ -1,36 +1,45 @@
-export default (ctx) => {
+let obstacleLane
+let obstacleHeight
 
-    // const canvas = document.querySelector(".canvas")
-    // const ctx = canvas.getContext("2d")
+export default () => {
 
+    const canvas3 = document.querySelector(".canvas_3")
+    const ctx3 = canvas3.getContext("2d")
+    
     const obstacle = new Image()
     obstacle.src = "../img/obstacle.png"
-
-    const selectLane = () => {
-        let laneNombur = Math.floor(Math.random() * 3)
-        let lane = (laneNombur * 129) + 32.5
-        return lane
+    
+    const selectobstacleLane = () => {
+        let obstacleLaneNombur = Math.floor(Math.random() * 3)
+        let obstacleLane = (obstacleLaneNombur * 129) + 32.5
+        return obstacleLane
     }
     
-   let lane = selectLane()
-
+    let obstacleLane = selectobstacleLane()
+    
     obstacle.addEventListener('load', e => {
-        let ySpeed = 0
-        let speed = 1
+        let obstacleHeight = 0
+        let obstacleSpeed = 1
         setInterval(() => {
-            ySpeed += speed
-            ctx.clearRect(0, 0, 422, 650)
-            if (ySpeed < 700) {
-                ctx.drawImage(obstacle, lane, ySpeed)
-            } else if (ySpeed > 700) {
-                ctx.clearRect(0, 0, 422, 650)
-                ySpeed = -10
-                ySpeed += speed
-                lane = selectLane()
-                ctx.drawImage(obstacle, lane, ySpeed)
-                // console.log(lane)
+            obstacleHeight += obstacleSpeed
+            ctx3.clearRect(0, 0, 422, 650)
+            if (obstacleHeight < 700) {
+                ctx3.drawImage(obstacle, obstacleLane, obstacleHeight)
+            } else if (obstacleHeight > 700) {
+                ctx3.clearRect(0, 0, 422, 650)
+                obstacleHeight = -10
+                obstacleHeight += obstacleSpeed
+                obstacleLane = selectobstacleLane()
+                ctx3.drawImage(obstacle, obstacleLane, obstacleHeight)
+                // console.log(obstacleLane)
             }
         }, 5);
     })
 }
+
+export const obstacleObj = {
+    obstacleLane: obstacleLane,
+    obstacleHeight: obstacleHeight
+} 
+// export { obstacleLane, obstacleHeight }
 

@@ -1,6 +1,6 @@
 html {
     width: 1140px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin: 10px auto;
 }
 
@@ -8,9 +8,54 @@ html {
     width: 40%;
     margin-left: 30%;
     margin: auto;
+    display: none;
 }
+
 .canvas {
     background-color: transparent;
     border: 1px solid rgb(0, 0, 0);
+}
+
+.canvas_1 {
+    position: absolute;
+    z-index: 0;
+}
+
+.canvas_2 {
+    position: absolute;
+    z-index: 1;
+}
+
+.canvas_3 {
+    position: absolute;
+    z-index: 2;
+}
+
+.interface {
+    width: 40%;
+    margin-left: 30%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 200px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgb(59, 2, 2);
+    background-color: firebrick;
+    border-radius: 10px;
+    outline: none;
+}
+
+.lose {
+    width: 40%;
+    margin-left: 30%;
+    margin: auto;
+    text-align: center;
+    display: none;
+    padding-top: 200px;
 }
 

@@ -1,7 +1,7 @@
-export default (ctx) => {
+export default () => {
 
-    // const canvas = document.querySelector(".canvas")
-    // const ctx = canvas.getContext("2d")
+    const canvas1 = document.querySelector(".canvas_1")
+    const ctx1 = canvas1.getContext("2d")
 
     const road = new Image()
     road.src = "../img/road.png"
@@ -9,15 +9,13 @@ export default (ctx) => {
 
     const animate = () => {
         if (roadSpeed >= 0) roadSpeed = -302
-        ctx.drawImage(road, 0, roadSpeed)
-        ctx.drawImage(road, 0, roadSpeed + 302)
-        ctx.drawImage(road, 0, roadSpeed + 604)
-        ctx.drawImage(road, 0, roadSpeed + 906)
+        ctx1.drawImage(road, 0, roadSpeed)
+        ctx1.drawImage(road, 0, roadSpeed + 302)
+        ctx1.drawImage(road, 0, roadSpeed + 604)
+        ctx1.drawImage(road, 0, roadSpeed + 906)
         roadSpeed += 2
         
         requestAnimationFrame(animate)
     }
     animate()
 }
-
-
