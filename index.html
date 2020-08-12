@@ -7,21 +7,39 @@
     <title>Game</title>
 </head>
 <body>
-    <div class="interface">
-        <h1>CRAZY RACING</h1>
-        <button class="btn">START</button>
-    </div>
-    <div class="canvas-div">
-        <canvas class="canvas_1 canvas" width="422" height="650"></canvas>
-        <canvas class="canvas_2 canvas" width="422" height="650"></canvas>
-        <canvas class="canvas_3 canvas" width="422" height="650"></canvas>
-    </div>
-    <div class="lose">
-        <h1>LOOOSER!</h1>
-        <button class="btn">RESTART</button>
+    <div class="container">
+        
+        <div class="player-info">
+            <div class="log-in">
+                <h2>please login</h2><br>
+                <form>
+                    <input type="text" class="user-name" placeholder="Fisrt Name"><br>
+                    <input type="submit" class="submit-btn">
+                </form>
+            </div>
+            <div class="player">
+                <!-- <h1>Welcome player</h1>
+                <h2>Your score:</h2>
+                <div class="score"><p>score</p></div> -->
+            </div>
+        </div>
+    
+        <div class="game-box">
+            <div class="interface">
+                <h1>CRAZY RACING</h1>
+                <button class="start-btn">START</button>
+            </div>
+            <div class="canvas-div">
+                <canvas class="canvas_1 canvas" width="422" height="650"></canvas>
+                <canvas class="canvas_2 canvas" width="422" height="650"></canvas>
+                <canvas class="canvas_3 canvas" width="422" height="650"></canvas>
+            </div>
+            <div class="lose">
+                <h1>CRASHED!</h1>
+                <button class="restart-btn">RESTART</button>
+            </div>
+        </div>
     </div>
 </body>
 <script type="module" src="./index.js"></script>
-<!-- <script type="module" src="./javascript/Car.js"></script> -->
-<!-- <script type="module" src="./javascript/Obstacle.js"></script> -->
 </html>

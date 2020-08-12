@@ -1,14 +1,67 @@
 html {
     width: 1140px;
-    /* border: 1px solid #000; */
     margin: 10px auto;
 }
 
-.canvas-div {
+.container {
+    display: inline-block;
+    width: 100%;
+}
+
+.player-info {
+    width: 28%;
+    float: left;
+    /* border: 1px solid #000; */
+    text-align: center;
+}
+
+.log-in {
+    display: block;
+}
+
+.user-name {
+    margin-bottom: 20px;
+}
+
+.player {
+    display: none;
+}
+
+.score {
+    width: 30%;
+    margin: 30px auto;
+    border: 3px solid rgb(238, 215, 8);
+    box-shadow: 2px 2px 2px #000;
+    background-color: burlywood;
+    color: darkblue;
+    font-size: 20px;
+}
+
+.game-box {
     width: 40%;
-    margin-left: 30%;
+    float: left;
+}
+
+.canvas-div {
+    width: 100%;
     margin: auto;
     display: none;
+}
+
+.interface {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding-top: 200px;
+}
+
+.lose {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: none;
+    padding-top: 200px;
 }
 
 .canvas {
@@ -31,16 +84,7 @@ html {
     z-index: 2;
 }
 
-.interface {
-    width: 40%;
-    margin-left: 30%;
-    margin: auto;
-    text-align: center;
-    display: block;
-    padding-top: 200px;
-}
-
-.btn {
+.start-btn, .restart-btn, .submit-btn {
     font-size: 20px;
     padding: 10px;
     text-align: center;
@@ -49,13 +93,3 @@ html {
     border-radius: 10px;
     outline: none;
 }
-
-.lose {
-    width: 40%;
-    margin-left: 30%;
-    margin: auto;
-    text-align: center;
-    display: none;
-    padding-top: 200px;
-}
-
